@@ -3,15 +3,15 @@
 - Team leader:
 	- name: 張翔宇
 	- student_id: b08902129
-   	- github: [cwlin1998](https://github.com/cwlin1998)
+   	- github: [zombie5454](https://github.com/zombie5454)
 - member:
     - name: 王峻賢
     - student_id: b08902148
-    - github: [MarvinChung](https://github.com/MarvinChung)
+    - github: [Aldzmar](https://github.com/Aldzmar)
 - member:
     - name: 謝辰陽
     - student_id: b08902076
-    - github: [MarvinChung](https://github.com/MarvinChung)
+    - github: [smile04455660](https://github.com/smile04455660)
 ### Prerequsite
 ```
 $ pip install pygame
