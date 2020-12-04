@@ -1,12 +1,16 @@
 # Reversi Game Project
 ### Team members
 - Team leader:
-	- name: Cheng-Wei Lin
-	- student_id: r09922078
+	- name: 張翔宇
+	- student_id: b08902129
    	- github: [cwlin1998](https://github.com/cwlin1998)
 - member:
-    - name: Chi-Ming Chung
-    - student_id: r09944021
+    - name: 王峻賢
+    - student_id: b08902148
+    - github: [MarvinChung](https://github.com/MarvinChung)
+- member:
+    - name: 謝辰陽
+    - student_id: b08902076
     - github: [MarvinChung](https://github.com/MarvinChung)
 ### Prerequsite
 ```
