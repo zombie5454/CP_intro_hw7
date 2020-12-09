@@ -12,6 +12,8 @@
     - name: 謝辰陽
     - student_id: b08902076
     - github: [smile04455660](https://github.com/smile04455660)
+### Report
+We don't have time therefore we submit random agent.
 ### Prerequsite
 ```
 $ pip install pygame
