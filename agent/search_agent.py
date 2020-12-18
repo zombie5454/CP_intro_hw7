@@ -13,7 +13,7 @@ class SearchAgent(BaseAgent):
             self.icon = 1
             self.other_icon = -1
 
-    def _isValidPos(self, pos):
+    def _isValidPos(self, pos):             
         return pos >= 0 and pos < self.cols_n
 
     def _allDirections(self):
@@ -52,7 +52,7 @@ class SearchAgent(BaseAgent):
             """
             state = [False, False]
             self._iterateCells((col, row), step, state, obs)
-            if state[0] == True and state[1] == True:
+            if state[0] == True and state[1] == True and self._getIcon(row, col, obs) == 0:
                 return True
         return False
 
@@ -70,4 +70,33 @@ class SearchAgent(BaseAgent):
         for i in range(self.cols_n * self.rows_n):
             print("{0:2d}".format(obs[i]), end=" \n"[i % self.cols_n == self.cols_n - 1])
         print(self.allValidMove(obs))
-        return (self.col_offset + random.randint(0, self.cols_n-1) * self.block_len, self.row_offset + random.randint(0, self.rows_n-1) * self.block_len), pygame.USEREVENT
+        
+        m_col, m_row = None, None
+        largest_num = 0
+        for x, y in self.allValidMove(obs):
+            if (x == 0 or x == self.cols_n - 1) and (y == 0 or y == self.rows_n - 1):
+                m_col, m_row = x, y 
+                break
+            if not m_col is None and (x <= 1 or x >= self.cols_n - 2) and (y <= 1 or y >= self.rows_n - 2):
+                continue
+            all_num = 0 
+            for step in self._allDirections():
+                col = x + step[0]
+                row = y + step[1]
+                d_num = 0
+                while self._isValidPos(col) and self._isValidPos(row) and self._getIcon(row, col, obs) == self.other_icon:
+                    d_num += 1
+                    col += step[0]
+                    row += step[1]
+                if self._isValidPos(col) and self._isValidPos(row) and self._getIcon(row, col, obs) == self.icon:
+                    all_num += d_num  
+            if all_num > largest_num:
+                largest_num = all_num
+                m_col, m_row = x, y
+        print(m_col, m_row)                
+                
+
+        
+            
+
+        return (self.col_offset + m_col * self.block_len, self.row_offset + m_row * self.block_len), pygame.USEREVENT
