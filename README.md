@@ -5,7 +5,7 @@
 	- student_id: b08902129
    	- github: [zombie5454](https://github.com/zombie5454)
 - member:
-    - name: 王峻賢
+    - name: 王竣賢
     - student_id: b08902148
     - github: [Aldzmar](https://github.com/Aldzmar)
 - member:
@@ -13,7 +13,9 @@
     - student_id: b08902076
     - github: [smile04455660](https://github.com/smile04455660)
 ### Report
-We don't have time therefore we submit random agent.
+Priority Position:
+corner > score > close to corner
+
 ### Prerequsite
 ```
 $ pip install pygame
@@ -24,7 +26,8 @@ $ pip install tqdm
 .
 ├── README.md
 ├── agent
-│   └── base_agent.py
+│   ├── base_agent.py
+│   └── zombie5454.py
 ├── arena.py
 ├── board.py
 ├── env.py
